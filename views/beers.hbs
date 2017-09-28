@@ -1,8 +1,10 @@
 <div class="container">
 {{#each beers}}
 <ul>
-<li><a href="/beers/{{beer_id}}">{{beer_brand}}</a></li>
+<li><img src="{{beer_image}}" width="100px"><a href="/beers/{{beer_id}}">{{beer_brand}}</a></li>
 </ul>
 {{/each}}
 </div>
 <!--container-->
+
+<a href="/addbeer"><h3>Add a beer</h3></a>
