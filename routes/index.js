@@ -53,20 +53,13 @@ router.get('/beers/:id', function (req, res) {
     })
     .first()
     .then(beers => {
-      res.render('viewbeer', {
-        beers: beers
-      })
+      res.render('viewbeer', beers)
     })
 })
 
 router.get('/addbeer', function (req, res) {
-       res.render('addbeer')
-    })
-    .catch(function (err) {
-      res.status(500).send('DATABASE ERROR: ' + err.message)
-    })
+  res.render('addbeer')
 })
-
 
 router.post('/addbeer', function (req, res) {
   db.addBeers(req.body, req.app.get('connection'))
@@ -74,6 +67,5 @@ router.post('/addbeer', function (req, res) {
       res.redirect('/')
     })
 })
-
 
 module.exports = router
