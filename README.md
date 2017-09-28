@@ -1,3 +1,8 @@
+# Team Unicorn's end of week 3 group project 
+
+This is a repo where a boilerplate has been used to kick start the weekend for the boys. The following is a list of dependencies the boilerplate comes with and installation instructions. Drink up!
+
+
 # Boilerplate: Knex.js
 
 Phase 1 boilerplate project with:
