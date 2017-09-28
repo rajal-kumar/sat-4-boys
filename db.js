@@ -1,7 +1,9 @@
 
 module.exports = {
   getUser: getUser,
-  getUsers: getUsers
+  getUsers: getUsers,
+  getBeers: getBeers,
+  addBeers: addBeers
 }
 
 function getUsers (connection) {
@@ -14,4 +16,8 @@ function getUser (id, connection) {
 
 function getBeers (connection) {
   return connection('beers').select()
+}
+
+function addBeers (beer, connection) {
+  return connection('beers').insert(beer)
 }
