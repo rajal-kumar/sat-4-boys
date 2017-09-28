@@ -13,4 +13,43 @@ router.get('/', function (req, res) {
     })
 })
 
+router.get('/beers', function (req, res) {
+  db.getBeers(req.app.get('connection'))
+    .then(function (beers) {
+      res.render('beers', { beers: beers })
+    })
+    .catch(function (err) {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+})
+
+router.get('/users/:id', function (req, res) {
+  const id = Number(req.params.id)
+
+  db.getUsers(req.app.get('connection'))
+    .select('users.id as userId', 'users.name', 'users.github')
+    .where({'users.id': id })
+    .first()
+    .then(users => {
+      res.render('viewuser', { users: users })
+    })
+})
+
+router.get('/beers/:id', function (req, res) {
+  const id = Number(req.params.id)
+
+  db.getBeers(req.app.get('connection'))
+    .select('beers.beer_id as beerId', 'beers.beer_brand', 'beers.beer_type', 'beers.beer_image', 'beers.image')
+    .where({'beers.beer_id': id })
+    .first()
+    .then(beers => {
+      res.render('viewbeer', { beers: beers })
+    })
+})
+
+// .catch(function (err) {
+//   res.status(500).send('DATABASE ERROR: ' + err.message)
+// })
+// })
+
 module.exports = router
