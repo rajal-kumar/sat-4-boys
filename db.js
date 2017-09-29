@@ -3,7 +3,8 @@ module.exports = {
   getUser: getUser,
   getUsers: getUsers,
   getBeers: getBeers,
-  addBeers: addBeers
+  addBeers: addBeers,
+  getUsersPerBeer: getUsersPerBeer
 }
 
 function getUsers (connection) {
@@ -17,6 +18,14 @@ function getUser (id, connection) {
 function getBeers (connection) {
   return connection('beers').select()
 }
+
+function getUsersPerBeer (id, connection) {
+  return connection('beers')
+    .join('usersbeers', 'beers.beer_id', 'usersbeers.beer_id')
+    .join('users', 'usersbeers.user_id', 'users.id')
+    .select('users.name', 'users.id')
+    .where('beers.beer_id', id)
+  }
 
 function addBeers (beer, connection) {
   return connection('beers').insert(beer)

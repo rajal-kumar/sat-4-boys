@@ -148,4 +148,7 @@ exports.seed = function (knex, Promise) {
           beer_id: 99906,
           usertriesbeer: true,
           userlikesbeer: false
-        }),
+        })
+      ])
+    })
+}

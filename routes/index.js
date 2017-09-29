@@ -17,15 +17,33 @@ router.get('/', function (req, res) {
 
 router.get('/beers', function (req, res) {
   db.getBeers(req.app.get('connection'))
-    .then(function (beers) {
+    .then(function (beers, users) {
+      console.log('This is users', users)
       res.render('beers', {
-        beers: beers
+        beers: beers,
+        users: users
       })
     })
     .catch(function (err) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
+
+// router.get('/beers', function (req, res) {
+//   db.getEverything(req.app.get('connection'))
+//     .then((data) => {
+//       const viewData = {
+//         users: data[0],
+//         beers: data[1],
+//         usersbeers: data[2],
+//       }
+//       console.log(data[2])
+//       res.render('beers', viewData)
+//     })
+//     .catch(function (err) {
+//       res.status(500).send('DATABASE ERROR: ' + err.message)
+//     })
+// })
 
 router.get('/users/:id', function (req, res) {
   const id = Number(req.params.id)
@@ -45,15 +63,20 @@ router.get('/users/:id', function (req, res) {
 
 router.get('/beers/:id', function (req, res) {
   const id = Number(req.params.id)
-
+  
   db.getBeers(req.app.get('connection'))
     .select('beers.beer_id as beerId', 'beers.beer_brand', 'beers.beer_type', 'beers.beer_image', 'beers.image')
     .where({
       'beers.beer_id': id
     })
     .first()
-    .then(beers => {
-      res.render('viewbeer', beers)
+    .then(beer => {
+      db.getUsersPerBeer(id, req.app.get('connection'))
+        .then(users => {
+          console.log({beer, users})
+          res.render('viewbeer', {beer, users})
+
+        })
     })
 })
 

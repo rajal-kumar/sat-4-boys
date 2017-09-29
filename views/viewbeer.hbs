@@ -1,8 +1,17 @@
 <ul>
-  <li><img src="{{image}}" width="300px"></li>
-  <li><img src="{{beer_image}}" width="300px"></li>
-  <li>{{beer_brand}}</li>
-  <li>{{beer_type}}</li>
+  <li><img src="{{beer.image}}" width="300px"></li>
+  <li><img src="{{beer.beer_image}}" width="300px"></li>
+  <li>{{beer.beer_brand}}</li>
+  <li>{{beer.beer_type}}</li>
 </ul>
+
+<div>
+Users who liked this beer:
+{{#each users}}
+<ul>
+  <li>{{name}}</li>
+</ul>
+{{/each}}
+</div>
 
 <a href="/addbeer"><h3>Add a beer</h3></a>
