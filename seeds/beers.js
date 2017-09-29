@@ -26,8 +26,8 @@ exports.seed = function (knex, Promise) {
         knex('beers').insert({
           beer_id: 99904,
           beer_brand: 'Monteiths',
-          beer_type: 'RIPA Red IPA',
-          beer_image: 'https://thehitchhikersgubeer_idetobeer.files.wordpress.com/2016/05/img_0292_crop.jpg?w=640',
+          beer_type: 'Double Hopped IPA',
+          beer_image: 'http://tschuessikowski.de/wp-content/uploads/2015/10/IMG_8467.jpg',
           image: 'http://www.voxy.co.nz/files/imagecache/news_item_image/files/Monteiths%20LOGO.jpg'
         }),
         knex('beers').insert({
