@@ -1,0 +1,27 @@
+body {
+  background-color: #FCF3CF;
+}
+
+#selection {
+  background-image: url(http://lionco.com/content/styles/landing_hero/public/HeaderImage_Alcohol_AUS_0218.jpg);
+  background-repeat: no-repeat;
+  background-position: center center
+  width: 667px;
+  height: 370px;
+  max-width: 667px;
+  margin: 50px auto 0 auto;
+
+}
+
+/* #header {
+  background-color: white;
+} */
+
+.form {
+  margin-right: 10vw
+}
+
+.input {
+  width: 60vw;
+  float:right
+}

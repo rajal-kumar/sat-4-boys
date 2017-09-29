@@ -10,7 +10,10 @@ var app = express()
 
 // Middleware
 
-app.engine('hbs', hbs({extname: 'hbs'}))
+app.engine('hbs', hbs({
+  defaultLayout: 'main',
+  extname: 'hbs'
+}))
 app.set('view engine', 'hbs')
 app.set('views2', path.join(__dirname, 'views2'))
 app.use(bodyParser.urlencoded({ extended: true }))
