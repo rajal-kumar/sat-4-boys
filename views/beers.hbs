@@ -1,9 +1,14 @@
-<div class="container">
-{{#each beers}}
-<ul>
-<li><img src="{{beer_image}}" width="100px"><a href="/beers/{{beer_id}}">{{beer_brand}}</a></li>
-</ul>
-{{/each}}
+<div class="container has-text-centered">
+{{>header}}
+  <div class="wrapper">
+  {{#each beers}}
+    <div class="columns">
+      <div class="column"><a href="/beers/{{beer_id}}"><img src="{{image}}" width="100px"></a></div>
+      <a href="/beers/{{beer_id}}"><div class="column">{{beer_brand}}</a></div>
+      </div>
+      <hr />
+  {{/each}}
+  </div> <!-- wrapper -->
 </div>
 <!--container-->
 
