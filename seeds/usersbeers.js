@@ -38,7 +38,6 @@ exports.seed = function (knex, Promise) {
           usertriesbeer: true,
           userlikesbeer: true
         }),
-
         knex('usersbeers').insert({
           user_id: 1002,
           beer_id: 99901,
@@ -75,7 +74,6 @@ exports.seed = function (knex, Promise) {
           usertriesbeer: false,
           userlikesbeer: false
         }),
-
         knex('usersbeers').insert({
           user_id: 1003,
           beer_id: 99901,
@@ -112,7 +110,6 @@ exports.seed = function (knex, Promise) {
           usertriesbeer: false,
           userlikesbeer: false
         }),
-
         knex('usersbeers').insert({
           user_id: 1004,
           beer_id: 99901,
@@ -148,4 +145,7 @@ exports.seed = function (knex, Promise) {
           beer_id: 99906,
           usertriesbeer: true,
           userlikesbeer: false
-        }),
+        })
+      ])
+    })
+  }
