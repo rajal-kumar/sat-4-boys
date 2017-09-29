@@ -36,10 +36,8 @@ router.get('/users/:id', function (req, res) {
       'users.id': id
     })
     .first()
-    .then(users => {
-      res.render('viewuser', {
-        users: users
-      })
+    .then(user => {
+      res.render('viewuser', user)
     })
 })
 
@@ -56,6 +54,24 @@ router.get('/beers/:id', function (req, res) {
       res.render('viewbeer', beers)
     })
 })
+
+// router.get('/beers/:id', function (req, res) {
+//   const id = Number(req.params.id)
+
+//   db.getBeers(req.app.get('connection'))
+//     .select('beers.beer_id as beerId', 'beers.beer_brand', 'beers.beer_type', 'beers.beer_image', 'beers.image')
+//     .where({
+//       'beers.beer_id': id
+//     })
+//     .first()
+//     .then(beer => {
+//       db.getUsersPerBeer(id, req.app.get('connection'))
+//         .then(users => {
+//           console.log({ beer, users })
+//           res.render('viewbeer', { beer, users })
+//         })
+//     })
+// })
 
 router.get('/addbeer', function (req, res) {
   res.render('addbeer')
