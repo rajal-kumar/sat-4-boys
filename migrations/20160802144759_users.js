@@ -3,6 +3,8 @@ exports.up = function (knex, Promise) {
     table.increments('id').primary()
     table.string('name')
     table.string('github')
+    table.string('usrimage')
+    table.string('usrbio')
   })
 }
 

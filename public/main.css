@@ -1,5 +1,20 @@
 body {
-  background-color: #FCF3CF;
+  /*background-color: #FCF3CF;*/
+  font-family: 'Raleway', sans-serif;
+}
+
+/*font-family: 'Libre Barcode 39 Text', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Sigmar One', cursive;
+font-family: 'Bungee Inline', cursive;
+font-family: 'Bungee', cursive;
+font-family: 'Faster One', cursive;*/
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
 }
 
 #selection {
@@ -10,7 +25,10 @@ body {
   height: 370px;
   max-width: 667px;
   margin: 50px auto 0 auto;
+}
 
+#leaderboard {
+  /*display: inline-flex;*/
 }
 
 /* #header {
