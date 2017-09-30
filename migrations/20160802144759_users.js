@@ -4,7 +4,7 @@ exports.up = function (knex, Promise) {
     table.string('name')
     table.string('github')
     table.string('usrimage')
-    table.string('usrbio')
+    table.string('userbio')
   })
 }
 

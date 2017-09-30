@@ -2,11 +2,39 @@
 {{>header}}
   <div class="wrapper">
   {{#each beers}}
-    <div class="columns">
-      <div class="column"><a href="/beers/{{beer_id}}"><img src="{{image}}" width="100px"></a></div>
-      <a href="/beers/{{beer_id}}"><div class="column">{{beer_brand}}</a></div>
+
+  <article class="media">
+    <figure class="media-left">
+      <p class="image is-128x128">
+        <a href="/beers/{{beer_id}}"><img src="{{image}}" width="100px"></a>
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>{{beer_type}} - </strong> <small>{{beer_brand}}</small>
+          <br>
+          {{beer_bio}}
+        </p>
       </div>
-      <hr />
+  <nav class="level is-mobile">
+    <div class="level-left">
+      <a class="level-item">
+        <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+      </a>
+      <a class="level-item">
+        <span class="icon is-small"><i class="fa fa-thumbs-up"></i></span>
+      </a>
+    </div>
+  </nav>
+  </div>
+  <figure class="media-right">
+    <p class="image is-128x128">
+      <a href="/beers/{{beer_id}}"><img src="{{beer_image}}" width="100px"></a>
+    </p>
+  </figure>
+  </article>
+
   {{/each}}
   </div> <!-- wrapper -->
 </div>

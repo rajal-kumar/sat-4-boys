@@ -17,11 +17,16 @@ h1 {
   font-family: 'Bungee Shade', cursive;
 }
 
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
 #selection {
   background-image: url(http://lionco.com/content/styles/landing_hero/public/HeaderImage_Alcohol_AUS_0218.jpg);
   background-repeat: no-repeat;
   background-position: center center
-  width: 667px;
+  width: auto;
   height: 370px;
   max-width: 667px;
   margin: 50px auto 0 auto;
@@ -45,12 +50,22 @@ h1 {
 }
 
 .wrapper {
-  background-color: #D39948;
-  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  max-width: 80%;
   margin: 50px auto 0 auto;
-  height: 500px;
+  /*height: 500px;*/
+  padding: 20px;;
   overflow-x: hidden;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
+}
+
+.wrapper strong {
+  color: white;
+}
+
+.image img {
+  max-height: 128px;
 }
 
 .beerimage {
