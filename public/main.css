@@ -49,6 +49,12 @@ h2 {
   float:right
 }
 
+.navbar-item img {
+  max-height: 3rem;
+  position: relative;
+  bottom: 15px;
+}
+
 .wrapper {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
