@@ -1,16 +1,39 @@
 body {
-  background-color: #FCF3CF;
+  /*background-color: #FCF3CF;*/
+  font-family: 'Raleway', sans-serif;
+}
+
+/*font-family: 'Libre Barcode 39 Text', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Sigmar One', cursive;
+font-family: 'Bungee Inline', cursive;
+font-family: 'Bungee', cursive;
+font-family: 'Faster One', cursive;*/
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
 }
 
 #selection {
   background-image: url(http://lionco.com/content/styles/landing_hero/public/HeaderImage_Alcohol_AUS_0218.jpg);
   background-repeat: no-repeat;
   background-position: center center
-  width: 667px;
+  width: auto;
   height: 370px;
   max-width: 667px;
   margin: 50px auto 0 auto;
+}
 
+#leaderboard {
+  /*display: inline-flex;*/
 }
 
 /* #header {
@@ -27,12 +50,22 @@ body {
 }
 
 .wrapper {
-  background-color: #D39948;
-  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  max-width: 80%;
   margin: 50px auto 0 auto;
-  height: 500px;
+  /*height: 500px;*/
+  padding: 20px;;
   overflow-x: hidden;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
+}
+
+.wrapper strong {
+  color: white;
+}
+
+.image img {
+  max-height: 128px;
 }
 
 .beerimage {

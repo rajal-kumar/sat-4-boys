@@ -2,34 +2,43 @@
   {{>header}}
   <hr />
   <div id="welcome">
-    <h1 class="subtitle is-1 has-text-centered">Welcome</h1>
+    <p>Welcome! This site is an excuse for us EDA scriptkiddies to collaborate and argue about drinking, code, and webdesign while letting of some steam after another week at bootcamp...</p>
     <hr />
   </div>
 
-  <div id="leaderboard" class="container columns has-text-centered">
-      <span class="column">
-        <span id="1" class="tag is-info subtitle is-3">1</span> <!-- position 1 -->
-        <hr />
-        <span class="image"><a href="/users/1003"><img src="/images/joe.jpg"></a></span> <!-- user image -->
-      </span>
+<nav class="level">
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Drinkers</p>
+      <p class="title">4</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Brands</p>
+      <p class="title">6</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Beers</p>
+      <p class="title">6</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Likes</p>
+      <p class="title">0</p>
+    </div>
+  </div>
 
-      <span class="column">
-        <span id="2" class="tag is-info subtitle is-3">2</span> <!-- position 2 -->
-        <hr />
-        <span class="image"><a href="/users/1004"><img src="/images/rich.jpg"></a></span> <!-- user image -->
-      </span>
+</nav>
 
-      <span class="column">
-        <span id="3" class="subtitle is-3 tag is-info">3</span> <!-- position 3 --> 
-        <hr />
-        <span class="image"><a href="/users/1001"><img src="/images/cal.png"></a></span> <!-- user image -->
-      </span>
+  </div>
+  <hr />
 
-      <span class="column">
-        <span id="4" class="subtitle is-3 tag is-info">4</span> <!-- position 4 -->
-        <hr />
-        <span class="image"><a href="/users/1002"><img src="/images/raj.jpg"></a></span> <!-- user image -->
-      </span>
+{{> leaderboard}}
+
   </div><!--columns-->
     </div><!--row-->
     <div class="row">
@@ -43,11 +52,10 @@
   </div> --}}
   <div id="selection" class="has-text-centered">
     <a href="/beers">
-      <h3 class="button is-large">The Selection</h3>
+      <h3 class="button is-large">What's in the fridge?</h3>
     </a>
   </div><!--the selection-->
 </div><!--container-->
 
 
 <div class="columns"></div>
-

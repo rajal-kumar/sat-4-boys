@@ -5,6 +5,7 @@ exports.up = function (knex, Promise) {
     table.string('beer_type')
     table.string('beer_image')
     table.string('image')
+    table.string('beer_bio')
   })
 }
 
