@@ -19,7 +19,7 @@ router.get('/beers', function (req, res) {
   db.getBeers(req.app.get('connection'))
     .then(function (beers) {
       res.render('beers', {
-        beers: beers
+        beers: beers,
         users: users
       })
     })
@@ -42,8 +42,9 @@ router.get('/users/:id', function (req, res) {
         .then(beers => {
           console.log({beers, user})
       res.render('viewuser', {beers, user})
+      })
+    })
   })
-})
 
 router.get('/beers/:id', function (req, res) {
   const id = Number(req.params.id)
