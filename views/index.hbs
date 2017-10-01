@@ -4,62 +4,27 @@
 
   <section class="hero is-medium is-primary is-bold">
   <div class="hero-body">
-    <div class="container">
+    <div class="">
       <!-- <h1 class="title">
         Primary bold title
       </h1> -->
-      <h2 class="subtitle">
+      <h4 class="">
         Welcome! This site is an excuse for us EDA scriptkiddies to collaborate and argue about drinking, code, and webdesign while letting off some steam after another crazy week at bootcamp...
-      </h2>
+      </h4>
     </div>
   </div>
 </section>
-  <div id="welcome">
+  <div>
 <!--
     <p>Welcome! This site is an excuse for us EDA scriptkiddies to collaborate and argue about drinking, code, and webdesign while letting of some steam after another week at bootcamp...</p> -->
     <hr />
-  </div>
-
-
-
-<nav class="level">
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Drinkers</p>
-      <p class="title">13</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Brands</p>
-      <p class="title">6</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Beers</p>
-      <p class="title">6</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Tried</p>
-      <p class="title">0</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Likes</p>
-      <p class="title">0</p>
-    </div>
-  </div>
-
-</nav>
 
   </div>
-  <hr />
+    {{> statslevel}}
+    <hr />
+  </div>
 
-{{> leaderboard}}
+  {{> leaderboard}}
 
   <div id="selection" class="has-text-centered">
     <a href="/beers">

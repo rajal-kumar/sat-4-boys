@@ -13,8 +13,17 @@ font-family: 'Bungee Inline', cursive;
 font-family: 'Bungee', cursive;
 font-family: 'Faster One', cursive;*/
 
-h1 {
+.headertitle {
   font-family: 'Bungee Shade', cursive;
+  font-size: 25px;
+  position: relative;
+  bottom: 20px;
+
+}
+
+.headerimg {
+  position: relative;
+  top: 6px;
 }
 
 h2 {
@@ -56,10 +65,14 @@ h2 {
   float:right
 }
 
+.spacer {
+  margin-top: 20px;
+}
+
 .navbar-item img {
   max-height: 3rem;
   position: relative;
-  bottom: 15px;
+  bottom: 0px;
 }
 
 .wrapper {

@@ -16,11 +16,12 @@ router.get('/', function (req, res) {
 })
 
 router.get('/beers', function (req, res) {
-  db.getBeers(req.app.get('connection'))
+  db.getBeers(typeof req.app.get('connection'))
+    console.log(req.app.get('connection'))
     .then(function (beers) {
       res.render('beers', {
         beers: beers,
-        users: users
+        // users: users
       })
     })
     .catch(function (err) {
@@ -40,8 +41,8 @@ router.get('/users/:id', function (req, res) {
     .then(user => {
       db.getBeersPerUser(id, req.app.get('connection'))
         .then(beers => {
-          console.log({beers, user})
-      res.render('viewuser', {beers, user})
+          console.log({user, beers})
+      res.render('viewuser', {user, beers})
       })
     })
   })
