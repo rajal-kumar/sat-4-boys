@@ -6,4 +6,24 @@
   <li>{{beer_type}}</li>
 </ul>
 
-<a href="/addbeer"><h3>Add a beer</h3></a>
+<ul>
+  <li><img src="{{beer.image}}" width="300px"></li>
+  <li><img src="{{beer.beer_image}}" width="300px"></li>
+  <li>{{beer.beer_brand}}</li>
+  <li>{{beer.beer_type}}</li>
+</ul>
+
+<div>
+Users who liked this beer:
+{{#each users}}
+<ul>
+  <li>{{name}}</li>
+</ul>
+{{/each}}
+</div>
+
+<div id="btnmeme" class="has-text-centered">
+  <a href="/addbeer">
+    <h3 class="button is-large">Add a beer</h3>
+  </a>
+</div>

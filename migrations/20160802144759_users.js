@@ -4,7 +4,10 @@ exports.up = function (knex, Promise) {
     table.string('name')
     table.string('github')
     table.string('usrimage')
-    table.string('userbio')
+    table.string('alias')
+    table.string('superpower')
+    table.string('backStory')
+
   })
 }
 

@@ -40,6 +40,13 @@ h2 {
   background-color: white;
 } */
 
+.hero.is-medium .hero-body {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+
 .form {
   margin-right: 10vw
 }
@@ -74,6 +81,20 @@ h2 {
   max-height: 128px;
 }
 
+.userimage {
+  /*max-width: 30%;*/
+}
+
+.media {
+  margin-bottom: 20px;
+}
+
 .beerimage {
   width:70px
+}
+
+.footer {
+  margin-top: 20px;
+  /*position: absolute;
+  bottom: 0;*/
 }
