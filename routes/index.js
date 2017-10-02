@@ -16,9 +16,8 @@ router.get('/', function (req, res) {
 })
 
 router.get('/beers', function (req, res) {
-  db.getBeers(typeof req.app.get('connection'))
-    console.log(req.app.get('connection'))
-    .then(function (beers) {
+  db.getBeers(req.app.get('connection'))
+      .then(function (beers) {
       res.render('beers', {
         beers: beers,
         // users: users
