@@ -16,8 +16,9 @@ function getUser (id, connection) {
   return connection('users').where('id', id)
 }
 
-function getBeers (id, connection) {
-  return connection('beers').where('id', id)
+function getBeers (connection) {
+  console.log('This is connection: ', connection);
+  return connection('beers').select()
 }
 // return connection('beers').select()
 
