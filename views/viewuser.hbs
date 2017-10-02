@@ -1,0 +1,90 @@
+<div class="container">
+  {{> header}}
+
+<hr \>
+
+<div class="card">
+  <!-- <div class="card-image">
+    <figure class="image">
+      <img class="userimage is-48x48" src="{{usrimage}}" alt="Placeholder image">
+    </figure>
+  </div> -->
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img src="{{user.usrimage}}" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">{{user.name}}</p>
+        <p class="subtitle is-6"><span class="icon">
+                  <a href="https://github.com/{{user.github}}" ><i class="fa fa-github"></i></a>
+               </span> {{user.github}}</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <strong>Alias: </strong>{{user.alias}} <br>
+      <strong>Super power: </strong>{{user.superpower}} <br>
+      <strong>Bio: </strong>{{user.backStory}} <br>
+      <a>@bulmaio</a>.
+      <a href="#">#css</a> <a href="#">#responsive</a>
+      <br>
+      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    </div>
+  </div>
+</div>
+
+<section class="hero is-light spacer">
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h2 class="title">
+        What's {{user.name}} been drinking?
+      </h2> -->
+      <h2 class="">
+        What's {{user.name}} been drinking?
+      </h3>
+    </div>
+  </div>
+</section>
+
+<div class="wrapper">
+{{#each beers}}
+
+<article class="media">
+  <figure class="media-left">
+    <p class="image is-128x128">
+      <a href="/beers/{{beer_id}}"><img src="{{image}}" width="100px"></a>
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>{{beer_type}} - </strong> <small>{{beer_brand}}</small>
+        <br>
+        {{beer_bio}}
+      </p>
+    </div>
+<nav class="level is-mobile">
+  <div class="level-left">
+    <a class="level-item">
+      <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+    </a>
+    <a class="level-item">
+      <span class="icon is-small"><i class="fa fa-thumbs-up"></i></span>
+    </a>
+  </div>
+</nav>
+</div>
+<figure class="media-right">
+  <p class="image is-128x128">
+    <a href="/beers/{{beer_id}}"><img src="{{beer_image}}" width="100px"></a>
+  </p>
+</figure>
+</article>
+
+{{/each}}
+</div> <!-- wrapper -->
+</div>
+</div>

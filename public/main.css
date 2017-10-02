@@ -13,8 +13,17 @@ font-family: 'Bungee Inline', cursive;
 font-family: 'Bungee', cursive;
 font-family: 'Faster One', cursive;*/
 
-h1 {
+.headertitle {
   font-family: 'Bungee Shade', cursive;
+  font-size: 25px;
+  position: relative;
+  bottom: 20px;
+
+}
+
+.headerimg {
+  position: relative;
+  top: 6px;
 }
 
 h2 {
@@ -40,6 +49,13 @@ h2 {
   background-color: white;
 } */
 
+.hero.is-medium .hero-body {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+
 .form {
   margin-right: 10vw
 }
@@ -47,6 +63,16 @@ h2 {
 .input {
   width: 60vw;
   float:right
+}
+
+.spacer {
+  margin-top: 20px;
+}
+
+.navbar-item img {
+  max-height: 3rem;
+  position: relative;
+  bottom: 0px;
 }
 
 .wrapper {
@@ -68,6 +94,20 @@ h2 {
   max-height: 128px;
 }
 
+.userimage {
+  /*max-width: 30%;*/
+}
+
+.media {
+  margin-bottom: 20px;
+}
+
 .beerimage {
   width:70px
+}
+
+.footer {
+  margin-top: 20px;
+  /*position: absolute;
+  bottom: 0;*/
 }

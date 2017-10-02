@@ -8,17 +8,17 @@
   <article class="media">
   <figure class="media-left">
     <p class="image is-96x96">
-      <img src="{{usrimage}}">
+    <a href="/users/{{id}}"><img src="{{usrimage}}"> </a>
     </p>
   </figure>
   <div class="media-content">
     <div class="content">
       <p>
-        <strong>{{name}}</strong> <small><span class="icon">
-      <i class="fa fa-github"></i>
-    </span> {{github}}</small> <small>31m</small>
+        <strong>{{name}}</strong> <small>"{{alias}}"</small>
         <br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+        Superpower: {{superpower}}
+        <br>
+        {{backStory}}
       </p>
     </div>
     <nav class="level is-mobile">
@@ -30,8 +30,12 @@
           <span class="icon is-small"><i class="fa fa-retweet"></i></span>
         </a>
         <a class="level-item">
-          <span class="icon is-small"><i class="fa fa-heart"></i></span>
+          <span class="icon is-small"><i class="fa fa-thumbs-up"></i></span>
         </a>
+        <small><span class="icon">
+                  <a href="https://github.com/{{github}}" ><i class="fa fa-github"></i></a>
+               </span> {{github}}
+        </small>
       </div>
     </nav>
   </div>

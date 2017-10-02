@@ -1,61 +1,39 @@
 <div class ="container">
   {{>header}}
   <hr />
-  <div id="welcome">
-    <p>Welcome! This site is an excuse for us EDA scriptkiddies to collaborate and argue about drinking, code, and webdesign while letting of some steam after another week at bootcamp...</p>
+
+  <section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="">
+      <!-- <h1 class="title">
+        Primary bold title
+      </h1> -->
+      <h4 class="">
+        Welcome! This site is an excuse for us EDA scriptkiddies to collaborate and argue about drinking, code, and webdesign while letting off some steam after another crazy week at bootcamp...
+      </h4>
+    </div>
+  </div>
+</section>
+  <div>
+<!--
+    <p>Welcome! This site is an excuse for us EDA scriptkiddies to collaborate and argue about drinking, code, and webdesign while letting of some steam after another week at bootcamp...</p> -->
+    <hr />
+
+  </div>
+    {{> statslevel}}
     <hr />
   </div>
 
-<nav class="level">
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Drinkers</p>
-      <p class="title">4</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Brands</p>
-      <p class="title">6</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Beers</p>
-      <p class="title">6</p>
-    </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Likes</p>
-      <p class="title">0</p>
-    </div>
-  </div>
+  {{> leaderboard}}
 
-</nav>
-
-  </div>
-  <hr />
-
-{{> leaderboard}}
-
-  </div><!--columns-->
-    </div><!--row-->
-    <div class="row">
-    <div class="columns">
-    <div id="users">
-    </div> <!-- users -->
-  </div> <!-- leaderboard -->
-
-{{!-- <div class="has-text-centered">
-    <a href="/userlist"><h3 class="button is-primary is-large" >View Users</h3></a>
-  </div> --}}
   <div id="selection" class="has-text-centered">
     <a href="/beers">
       <h3 class="button is-large">What's in the fridge?</h3>
     </a>
-  </div><!--the selection-->
-</div><!--container-->
+  </div>
 
-
-<div class="columns"></div>
+<div id="btnmeme" class="has-text-centered">
+  <a href="/beers">
+    <h3 class="button is-large">Sure would like a cold meme right about now...</h3>
+  </a>
+</div>
