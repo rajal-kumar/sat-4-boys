@@ -2,7 +2,7 @@
 {{>header}}
 <hr />
 
-<div class="container">
+<div class="">
 
 <article class="media">
   <figure class="media-left">
@@ -39,18 +39,77 @@
 </div> <!-- wrapper -->
 <hr />
 
+<div class="">
+  <h2>Those who dared to try...</h2>
 
-<div class="container">
-Users who liked this beer:
-{{#each users}}
-<ul>
-  <li>User is {{name}}</li>
-  <li>Comments on this beer:
-  <li>{{comment}}</li>
-  </li>
-</ul>
-{{/each}}
 </div>
+<hr />
+
+
+{{#each users}}
+<div class="">
+  <article class="media">
+  <figure class="media-left">
+    <p class="image is-96x96">
+    <a href="/users/{{id}}"><img src="{{users.usrimage}}"> </a>
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>{{name}}</strong> <small>"{{alias}}"</small>
+        <br>
+        Superpower: {{superpower}}
+        <br>
+        {{backStory}}
+      </p>
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fa fa-reply"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fa fa-thumbs-up"></i></span>
+        </a>
+        <small><span class="icon">
+                  <a href="https://github.com/{{github}}" ><i class="fa fa-github"></i></a>
+               </span> {{github}}
+        </small>
+      </div>
+    </div>
+    </article>
+
+<article class="media">
+   <figure class="media-left">
+     <p class="image is-48x48">
+       <img src="">
+     </p>
+   </figure>
+   <div class="media-content">
+     <div class="content">
+       <p>
+         <strong>Comment </strong>
+         <br>
+         {{comment}}
+         <br>
+         <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+       </p>
+     </div>
+   </div>
+ </article>
+
+
+    </nav>
+  </div>
+</article>
+
+</div>
+{{/each}}
+
 
 
 
