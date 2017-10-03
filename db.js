@@ -22,14 +22,16 @@ function getBeers (connection) {
 }
 // return connection('beers').select()
 
-
 function getUsersPerBeer (id, connection) {
   return connection('beers')
     .join('usersbeers', 'beers.beer_id', 'usersbeers.beer_id')
     .join('users', 'usersbeers.user_id', 'users.id')
-    .select('users.name', 'users.id', 'usertriesbeer')
+    .join('usersbeerscomments','usersbeerscomments.user_id','users.id')
+    .select('users.name', 'users.id', 'usertriesbeer',
+    'comment')
     .where('beers.beer_id', id)
     .andWhere('usertriesbeer', true)
+    .andWhere('usersbeerscomments.beer_id', id)
 }
 
 function getBeersPerUser (id, connection) {

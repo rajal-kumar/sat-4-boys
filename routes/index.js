@@ -20,7 +20,7 @@ router.get('/beers', function (req, res) {
       .then(function (beers) {
       res.render('beers', {
         beers: beers,
-        users: users
+        // users: users
       })
     })
     .catch(function (err) {
@@ -50,7 +50,7 @@ router.get('/beers/:id', function (req, res) {
   const id = Number(req.params.id)
 
   db.getBeers(req.app.get('connection'))
-    .select('beers.beer_id as beerId', 'beers.beer_brand', 'beers.beer_type', 'beers.beer_image', 'beers.image')
+    .select('beers.beer_id as beerId', 'beers.beer_brand', 'beers.beer_type', 'beers.beer_image', 'beers.image', 'beers.beer_bio')
     .where({
       'beers.beer_id': id
     })

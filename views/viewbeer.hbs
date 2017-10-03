@@ -1,26 +1,58 @@
+<div class="container">
 {{>header}}
-<ul>
-  <li><img src="{{image}}" width="300px"></li>
-  <li><img src="{{beer_image}}" width="300px"></li>
-  <li>{{beer_brand}}</li>
-  <li>{{beer_type}}</li>
-</ul>
+<hr />
 
-<ul>
-  <li><img src="{{beer.image}}" width="300px"></li>
-  <li><img src="{{beer.beer_image}}" width="300px"></li>
-  <li>{{beer.beer_brand}}</li>
-  <li>{{beer.beer_type}}</li>
-</ul>
+<div class="container">
 
-<div>
+<article class="media">
+  <figure class="media-left">
+    <p class="image is-128x128">
+      <a href="/beers/{{beer.beer_id}}"><img src="{{beer.image}}" width="100px"></a>
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>{{beer.beer_type}} - </strong> <small>{{beer.beer_brand}}</small>
+        <br>
+        {{beer.beer_bio}}
+      </p>
+    </div>
+<nav class="level is-mobile">
+  <div class="level-left">
+    <a class="level-item">
+      <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+    </a>
+    <a class="level-item">
+      <span class="icon is-small"><i class="fa fa-thumbs-up"></i></span>
+    </a>
+  </div>
+</nav>
+</div>
+<figure class="media-right">
+  <p class="image is-128x128">
+    <a href="/beers/{{beer.beer_id}}"><img src="{{beer.beer_image}}" width="100px"></a>
+  </p>
+</figure>
+</article>
+
+</div> <!-- wrapper -->
+<hr />
+
+
+<div class="container">
 Users who liked this beer:
 {{#each users}}
 <ul>
-  <li>{{name}}</li>
+  <li>User is {{name}}</li>
+  <li>Comments on this beer:
+  <li>{{comment}}</li>
+  </li>
 </ul>
 {{/each}}
 </div>
+
+
 
 <div id="btnmeme" class="has-text-centered">
   <a href="/addbeer">
