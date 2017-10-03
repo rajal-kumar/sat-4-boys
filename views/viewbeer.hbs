@@ -2,7 +2,7 @@
 {{>header}}
 <hr />
 
-<div class="">
+<div class="container">
 
 <article class="media">
   <figure class="media-left">
@@ -48,7 +48,7 @@
 
 {{#each users}}
 <div class="">
-  <article class="media">
+  <article class="media viewbeerdrinker">
   <figure class="media-left">
     <p class="image is-96x96">
     <a href="/users/{{id}}"><img src="{{users.usrimage}}"> </a>
@@ -82,8 +82,10 @@
       </div>
     </div>
     </article>
+  </nav>
 
-<article class="media">
+
+<article class="media comment">
    <figure class="media-left">
      <p class="image is-48x48">
        <img src="">
@@ -103,9 +105,10 @@
  </article>
 
 
-    </nav>
   </div>
 </article>
+<hr />
+
 
 </div>
 {{/each}}

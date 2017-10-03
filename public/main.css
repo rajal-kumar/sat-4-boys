@@ -26,6 +26,15 @@ font-family: 'Faster One', cursive;*/
   top: 6px;
 }
 
+.viewbeerdrinker {
+  position: relative;
+  right: 72px;
+}
+.comment {
+  position: relative;
+  left: 48px;
+}
+
 h2 {
   font-weight: bold;
   font-size: 24px;
